@@ -1,123 +1,352 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Tugas UTS Sistem dan Teknologi Informasi</title>
-  
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,700;1,700&display=swap" rel="stylesheet">
+:root {
+  --primary: #f30b3e;
+  --bg: #010101;
+}
 
-<!-- Feather Icons -->
-<script src="https://unpkg.com/feather-icons"></script>
+*{
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border-block: none;
+  text-decoration: none;
+}
 
-<!-- My style -->
-  <link rel="stylesheet" href="css/style.css"
-</head>
-<body>
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', Sans-Serif;
+  background-color: var(--bg);
+  color: #fff
+  min-height: 4000px;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(1, 1, 1; 0.8);
+  border-bottom: 1px solid var(--primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  font-style: italic;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.5rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: '';
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transform: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after{
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var>(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url('../img/header-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.hero::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(1, 1, 3, 1)8%, rgba(255, 255, 255, 0) 50%);
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 5rem;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.2;
+}
+
+.hero .content h1 span {
+  color: var(--primary);
+}
+
+.hero .content p {
+  font-size: 2rem;
+  margin-top: 1rem;
+  line-height: 1.4;
+  font-weight: 100;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  mix-blend-mode: different;
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+/* About Section */
+.about,
+.menu,
+.contact {
+  min-height: 100vh;
+  align-items: center;
+  padding: 8rem 7% 1.4rem;
+}
+
+.about h2, 
+.menu h2,
+.contact h2 {
+  text-align: center;
+  color: #f30b3e;
+  font-size: 2.6rem;
+  margin-bottom: 8rem;
+}
+
+.about .row {
+  display: flex;
+}
+
+.about .row .about-img {
+  flex: 1 1 45rem;
+}
+
+.about .row .about-img img {
+  width: 60%;
   
-  <!-- Navbar Start -->
-  <nav class="navbar">
-    <a href="#" class="navbar-logo">Muhammad Alvin Ka<span>romy</span></a>
-    
-    <div class="navbar-nav">
-      <a href="#home">Home</a>
-      <a href="#about">Tentang Saya</a>
-      <a href="#menu">Tugas</a>
-      <a href="#contact">Sosmed</a>
-    </div>
-    
-    <div class="navbar-extra">
-      <a href="#" id="hamburger-menu"><i data-feather="menu"></i></a>
-    </div>
-  </nav>
-  <!-- Navbar End -->
+}
+
+.about .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+
+.about .row .content h3 {
+  margin-left: -rem;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #f30b3e;
+}
+
+.about .row .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.6rem;
+  font-weight: 100;
+  line-height: 1.5;
+  color: #fff;
+}
+
+/* Menu Section */
+.menu h2,
+.contact h2 {
+  margin-bottom: 1.5rem;
+}
+.menu p, 
+.contact p {
+  text-align: center;
+  font-size: 1.5rem;
+  max-width: 30rem;
+  margin: auto;
+  font-weight: 100;
+  line-height: 1.6;
+  color: #fff;
+}
+
+.menu .row {
+  display: flex;
+  flex-wrap: warp;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+.menu .row .menu-card {
+  text-align: center;
+  padding: 1rem;
+  width: 100px;
+  height: 100px;
+  background-color: black;
+}
+
+.menu .row .menu-card img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%
+  margin: 0;
+}
+
+.menu .row .menu-card a {
+  position: different;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--primary);
+  background-color: #white;
+  opacity: 0.8;
+}
+
+.menu .row .menu-card h3 {
+  font-size: 1rem;
+  justify-content: center;
+  color: var(--primary);
   
-  <!-- Hero Section start -->
-  <section class="hero" id="home">
-    <main class="content">
-      <h1>Aku <span>Romy</span></h1>
-      <p>Informasi Tentang Kehidupanku yang Ingin Menjadi Pendekar</p>
-      <a href="#" class="cta">Romy</a>
-    </main>
-  </section>
-  <!-- Hero Section End -->
+}
+
+/* Contact Section */
+.contact .row {
+  position: different;
+  margin-top: 4rem;
+  justify-content: left;
+  display: flex ; 
+}
+.contact .row .contact-icon a {
+  color: var(--primary);
+  display: inline-block;
+  width: 100%;
+  padding: 1.5rem;
+  margin: 0 20px;
+}
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
   
-  <!-- About Section Start -->
-  <section id="about" class="about">
-    <h2>Tentang Saya</h2>
-    
-    <div class="row">
-      <div class="about-img">
-        <img src="img/tentang-saya.jpeg" alt="Tentang Saya"
-        alt="tentang-saya">
-      </div>
-      <div class="content">
-        <h3>Informasi Data</h3>
-        <p>Namaku adalah Muhammad Alvin Karomy, biasa dipanggil Romy</p>
-        <p>Aku adalah seorang mahasiswa di Universitas Islam Nahdlatul Ulama Jepara (231240001352) Prodi Teknik Informatika Fakultas Sains dan Teknologi dan aku ditempatkan di kelas DA.</p>
-      </div>
-    </div>
-  </section>
-  <!-- About Section End -->
+  #hamburger-menu {
+    display: inline-block;
+  }
   
-  <!-- Menu script Start -->
-  <section id="menu" class="menu">
-    <h2>Tugas</h2>
-    <p>Tugas-tugas Sistem dan Teknologi Informasi.</p>
-    
-    <div class="row">
-      <div class="menu-card">
-        <a href="https://docs.google.com/document/d/17k2wTkVUGxmcmaeoHwjhqY4o_pTWf8WI/edit?usp=drivesdk&ouid=112879149989834539798&rtpof=true&sd=true"><img src="img/1.webp" alt="book" class="menu-card-img">
-        </a>
-        <h3 class="menu-card-tittle"> -Tugas 1- </h3>
-      </div>
-    
-      <div class="menu-card">
-        <a href="https://docs.google.com/document/d/17rb8iy7iJCiU2tk3ZxLGYZcaWbo-jJsi/edit?usp=drivesdk&ouid=112879149989834539798&rtpof=true&sd=true"><img src="img/1.webp" alt="book" class="menu-card-img">
-          </a>
-        <h3 class="menu-card-tittle">-Tugas 2-</h3>
-      </div>
-    
-      <div class="menu-card">
-        <a href="https://docs.google.com/spreadsheets/d/1uex-vFKOs6B6GGCp7AuAqKSqQcZOOYCe/edit?usp=drivesdk&ouid=112879149989834539798&rtpof=true&sd=true"><img src="img/1.webp" alt="book" class="menu-card-img">
-        <h3 class="menu-card-tittle">-Tugas 3-</h3>
-      </div>
-    </div>
-    
-  </section>
-  <!-- Menu script End -->
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
   
-  <!-- Content Section Start -->
-  <section id="contact" class="contact">
-    <h2>Contact Person</h2>
-    <p>Go Follow all my Social Medias</p>
-    
-    <div class="row">
-      <div class="contact-icon">
-        <a href="https://instagram.com/romyyzh_?igshid=OGQ5ZDc2ODk2ZA==" id="instagram"><i data-feather="instagram"></i><h3>@romyyzh_</h3></a>
-        
-        <a href="https://www.facebook.com/romy.gaming.14" id="facebook"><i data-feather="facebook"></i><h3>Romy</h3></a>
-        
-        <a href="https://mail.google.com/mail/mu/mp/903/#tl/priority/%5Esmartlabel_personal" id="mail"><i data-feather="mail"></i><h3>muhammadalvinkaromy@gmail.com</h3></a>
-        
-        <a href="https://wa.me/62895326544080/" id="phone"><i data-feather="phone"></i><h3>0895326544080</h3></a>
-        
-        <a href=" " id="twitter"><i data-feather="twitter"></i><h3>Romyyzh</h3></a>
-        </div>
-        
-  </section>
-  <!-- Content Section Start -->
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
   
-  <!-- Feather Icons -->
-  <script>
-      feather.replace();
-    </script>
-    
-    <!-- My Javascript -->
-    <script src="js/script.js"></script>
-</body>
-</html>
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+  
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+  
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+  
+  .about .row {
+    flex-wrap: warp;
+  }
+  
+  .about .roq .about-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .about .row .content {
+    padding: 0;
+  }
+  
+  .about .row .content h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+  
+  .about .row .content p {
+    font-size: 1.8rem;
+  }
+}
+
+.menu p {
+  font-size: 1.5rem;
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}

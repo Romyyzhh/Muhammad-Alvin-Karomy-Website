@@ -92,7 +92,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url('img/header-bg.jpg');
+  background-image: url('../img/header-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -111,65 +111,6 @@ body {
 .hero .content {
   padding: 1.4rem 7%;
   max-width: 60rem;
-}
-
-section .header{
-  margin-bottom: 1rem;
-  color: #fff;
-  text-align: center;
-  font-size: 2.25rem;
-  font-weight: 600;
-}
-
-.features{
-  margin-top: 4rem;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-}
-
-.features .card{
-  background-color: #27272a;
-  padding: 1rem;
-  border: 2px solid transparent;
-  border-radius: 15px;
-  transition: all 0.3s ease;
-}
-
-.features .card:hover{
-  background-color: #323232;
-  border-color: #fff;
-}
-
-.features .card span{
-  display: inline-block;
-  background-color: #f30b3e;
-  padding: 2px 9px;
-  margin-bottom: 1rem;
-  font-size: 1.75rem;
-  color: #fff;
-  border-radius: 5px;
-}
-
-.features .card h4{
-  margin-bottom: 0.5rem;
-  color: #fff;
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-
-.features .card p{
-  color: #ccc;
-  margin-bottom: 1rem;
-}
-
-.features .card a{
-  color: #fff;
-  transition: all 0.3s ease;
-}
-
-.features .card a:hover{
-  color: #f30b3e;
 }
 
 .hero .content h1 {
@@ -282,15 +223,15 @@ section .header{
 .menu .row .menu-card {
   text-align: center;
   padding: 1rem;
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   background-color: black;
 }
 
 .menu .row .menu-card img {
-  border-radius: 20%;
-  width: 20%;
-  height: 20%
+  border-radius: 50%;
+  width: 100%;
+  height: 100%
   margin: 0;
 }
 
@@ -298,8 +239,8 @@ section .header{
   position: different;
   top: 0;
   left: 0;
-  width: 50%;
-  height: 50%;
+  width: 100%;
+  height: 100%;
   color: var(--primary);
   background-color: #white;
   opacity: 0.8;
@@ -319,8 +260,6 @@ section .header{
   justify-content: left;
   display: flex ; 
 }
-
-/* IcikiwiRRRRRRRRRRRRr */
 .contact .row .contact-icon a {
   color: var(--primary);
   display: inline-block;
